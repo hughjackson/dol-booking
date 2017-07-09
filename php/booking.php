@@ -125,7 +125,7 @@ body, html {
 <?php
 			foreach (timesForClass($age[1], $day) as $time) {
 ?>
-    <div id="btn<?php print $time[2]; ?>" onclick="toggleSection2('btn<?php print $time[2]; ?>', 'sec-<?php print $day; ?>')" 
+    <div id="btn<?php print $time[2]; ?>" onclick="toggleSection2('btn<?php print $time[2]; ?>', 'sec-<?php print $time[2]; ?>')" 
 	class="toggle-button-2 w3-border w3-col <?php colSize($age[1], $day); ?> w3-padding-small color-3">
       <p class="w3-center w3-medium text-color-2 font-chunky"><?php print timeRange($time[0]) . "<br>" . $time[1]; ?></p>
     </div>
@@ -160,8 +160,8 @@ body, html {
 			foreach ($slot as $time) {
 				if ($time) {
 ?>
-    <div id="btn<?php print $time[2]; ?>" onclick="toggleSection2('btn<?php print $time[2]; ?>', 'sec-<?php print $day; ?>')" 
-	class="toggle-button-2 w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+    <div id="btn<?php print $time[2]; ?>" onclick="toggleSection2('btn<?php print $time[2]; ?>', 'sec-<?php print $time[2]; ?>')" 
+	class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky"><?php print timeRange($time[0]) . "<br>" . $time[1]; ?></p>
     </div>
 <?php
@@ -190,24 +190,32 @@ body, html {
 <p id="step3" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">3. Select your start date.</p>
 
 <?php
-	foreach ($days as $day) {
-		$term = currentTerm()
+	$num = 0;
+	foreach ($classes as $time) {
+		$day = $time[0];
 ?>
-  <div id="sec-<?php print $day; ?>" class="toggle-section-2 w3-cell-row w3-hide w3-animate-bottom">
+  <div id="sec-<?php print $num; ?>" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <div class="w3-cell-row">
 <?php
+		$optnum = 0;
 		foreach (getTermOptions($day) as $opt) {
 ?>
-      <a href="register"  class="color-1 w3-cell w3-mobile w3-leftbar w3-rightbar w3-topbar w3-bottombar w3-border-white w3-center w3-padding font-chunky w3-large" style="width:33%; text-decoration:none">
+      <a href="register?lesson=<?php print $num;?>&option=<?php print $optnum;?>" class = "w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
+        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
 <?php
-			print "     <p>$opt[2] (Starting on $opt[0])</p>";
-			print "     <p>$opt[1] lessons @6.5 + registration @15 = $opt[3]</p>";
+			print "       <p>$opt[2] (Starting on $opt[0])</p>";
+			print "       <p>$opt[1] lessons @6.5 + registration @15 = $opt[3]</p>";
 ?>
+        </div>
       </a>
 <?php
+			$optnum++;
 		}
 ?>
+    </div>
   </div>
 <?php
+		$num++;
 	}
 ?>
 

@@ -90,5 +90,14 @@ PLACEHOLDER FOR REGISTRATION FORM:
 
 NAME, EMAIL, PHONE, CHILD, DOB, SHOE SIZE
 
+<div class="w3-container">
+<?php
+	$class = $classes[$_GET['lesson']];
+	$option = getTermOptions($class[0])[$_GET['option']];
+	print "<p>$class[3] - $class[2] - $class[0] - " . timeRange($class[1]) . "</p>";
+	print "<p>$option[2] starting $option[0] with $option[1] lessons costing GBP$option[3]</p>";
+?>
+</div>
+
 </body>
 </html>
