@@ -1,5 +1,5 @@
 <?php
-$extensions = array("otf", "php", "jpg", "jpeg", "gif", "css");
+$extensions = array("otf", "ttf", "txt", "php", "jpg", "jpeg", "gif", "css");
 
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 $ext = pathinfo($path, PATHINFO_EXTENSION);
