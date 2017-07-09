@@ -22,14 +22,13 @@ $classes = array(
 	);
 
 $days = array(
-	'Sunday',
 	'Monday',
 	'Tuesday',
 	'Wednesday',
 	'Thursday',
 	'Friday',
-	'Saturday',
 	);
+
 
 function daysForClass($class)
 {
@@ -56,6 +55,36 @@ function timesForClass($class, $day)
 		$i++;
 	}
 	return $times;
+}
+
+function timesByDay($class)
+{
+	global $classes;
+	global $days;
+	foreach ($days as $day) {
+		$allTimes[] = timesForClass($class, $day);
+	}
+	$i = 0;
+	$continue = true;
+	while($continue) {
+		$continue = false;
+		$row = array();
+		foreach ($days as $day) {
+			$temp = timesForClass($class, $day);
+			if (count($temp) > $i) {
+				$row[] = $temp[$i];
+				$continue = true;
+			} else {
+				$row[] = null;
+			}
+
+		}
+		if ($continue) {
+			$result[] = $row;
+		}
+		$i++;
+	}
+	return $result;
 }
 
 function timeRange($time)
