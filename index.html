@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://192.168.1.7:8000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Dance Out Loud</title>
+<link rel="icon" href="http://192.168.1.7:8000/favicon.ico" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./index_files/w3.css">
+<link rel="stylesheet" href="./index_files/font-awesome.min.css">
+<link href="./index_files/icon" rel="stylesheet">
+<link href="./index_files/css" rel="stylesheet">
+<script src="./index_files/jquery.min.js"></script>
+<style>
+@font-face {
+    font-family: playlist-caps;
+    src: url("fonts/Playlist Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: playlist-script;
+    src: url("fonts/Playlist Script.otf") format("opentype");
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.5;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-size: cover;
+    background-position:center;
+    background-image: url("https://static.wixstatic.com/media/b80d9e_9693ef49f1bd4b43b9bcf6d73e64f180~mv2.jpg/v1/fill/w_1286,h_382,al_c,q_85,usm_0.66_1.00_0.01/b80d9e_9693ef49f1bd4b43b9bcf6d73e64f180~mv2.webp");
+    min-height: 387px;
+}
+.trialpass-img {
+    background-size: cover;
+    background-position:center;
+    background-image: url("https://static.wixstatic.com/media/b80d9e_27fbcf98bf5440cca05e4a900dcbab3e~mv2.jpg/v1/fill/w_280,h_208,al_c,q_80,usm_0.66_1.00_0.01/b80d9e_27fbcf98bf5440cca05e4a900dcbab3e~mv2.webp");
+}
+.bgimg-class-1, .bgimg-class-2, .bgimg-class-3 {
+    background-size: cover;
+    background-position:center;
+    height:100px;
+}
+.bgimg-class-1 {
+    background-image: url("https://static.wixstatic.com/media/b80d9e_c566cbe19ee3473995242da5949dd338~mv2.jpg/v1/fill/w_515,h_873,al_c,q_85,usm_0.66_1.00_0.01/b80d9e_c566cbe19ee3473995242da5949dd338~mv2.webp");
+}
+.bgimg-class-2 {
+    background-image: url("https://static.wixstatic.com/media/b80d9e_51b96b18b72b46eb96c7c5cac28d2f44~mv2.jpg/v1/fill/w_515,h_846,al_c,q_85,usm_0.66_1.00_0.01/b80d9e_51b96b18b72b46eb96c7c5cac28d2f44~mv2.webp");
+}
+.bgimg-class-3 {
+    background-image: url("https://static.wixstatic.com/media/b80d9e_2a19bfed261545c29d3150f52e080df0~mv2.jpg/v1/fill/w_1286,h_351,al_r,q_85,usm_0.66_1.00_0.01/b80d9e_2a19bfed261545c29d3150f52e080df0~mv2.webp");
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+.strip-centre{max-width:1200px; margin:0 auto}
+.strip-centre-small{max-width:600px; margin:0 auto}
+.anchor{
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
+    }
+
+.class{display:none}
+
+.w3-hover-opacity-none:hover {opacity: 1!important}
+.font-logo {font-family:amatic sc, cursive; line-height:60%; font-size:35px}
+.font-bold {font-family:playlist-caps,fantasy; line-height:110%}
+.font-chunky {font-family:raleway,fantasy; line-height:110%}
+.font-cursive {font-family:playlist-script,fantasy; line-height:110%}
+.color-1, .color-hover-1:hover {background-color:#ffa8be!important; color:#ffffff!important;}
+.color-text-1, .color-text-hover-1:hover {color:#ff8abd!important;}
+.color-2, .color-hover-2:hover {background-color:#9ec6df !important; color:#000000!important;}
+.color-text-2, .color-text-hover-2:hover {color:#9ec6d9 !important;}
+.color-3, .color-hover-3:hover {background-color:#757575!important; color:#ffffff!important;}
+.color-text-3, .color-text-hover-3:hover {color:#757575!important;}
+.color-text-4, .color-text-hover-4:hover {color:#53555a!important;}
+.color-text-5, .color-text-hover-5:hover {color:#2e2e2e!important;}
+</style>
+
+
+</head><body>
+
+<p class="w3-margin-left color-text-1 font-cursive w3-xxlarge">1. Select your class!</p>
+<div class="w3-white">
+  <div class="w3-row">
+    <div class="w3-third">
+      <div class="bgimg-class-1 w3-card-2 w3-center">
+        <div id="btn1" onclick="toggleSection(&#39;btn1&#39;, &#39;table1&#39;)" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
+          <span class="w3-xlarge font-chunky">
+            Dance With Me<br>1.5 - 3 yrs          </span>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="bgimg-class-2 w3-card-2 w3-center">
+        <div id="btn2" onclick="toggleSection(&#39;btn2&#39;, &#39;table2&#39;)" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
+          <span class="w3-xlarge font-chunky">
+            Fairy Ballet<br>3 - 5 yrs          </span>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third">
+      <div class="bgimg-class-3 w3-card-2 w3-center">
+        <div id="btn3" onclick="toggleSection(&#39;btn3&#39;, &#39;table3&#39;)" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
+          <span class="w3-xlarge font-chunky">
+            Tutu Ballet<br>5 -7 yrs          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a id="step2-anchor"></a>
+<p id="step2" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">2. Select your day/time...</p>
+
+<div id="table1" class="toggle-section w3-hide w3-animate-bottom">
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Mondays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn0" onclick="toggleSection2(&#39;btn0&#39;, &#39;sec-Monday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>Southampton</p>
+    </div>
+    <div id="btn3" onclick="toggleSection2(&#39;btn3&#39;, &#39;sec-Monday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:55 - 5:25pm<br>Southampton</p>
+    </div>
+  </div>
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Tuesdays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn5" onclick="toggleSection2(&#39;btn5&#39;, &#39;sec-Tuesday&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>Southampton</p>
+    </div>
+  </div>
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn10" onclick="toggleSection2(&#39;btn10&#39;, &#39;sec-Wednesday&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:30 - 5:00pm<br>West End</p>
+    </div>
+  </div>
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Fridays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn11" onclick="toggleSection2(&#39;btn11&#39;, &#39;sec-Friday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>West End</p>
+    </div>
+    <div id="btn13" onclick="toggleSection2(&#39;btn13&#39;, &#39;sec-Friday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>West End</p>
+    </div>
+  </div>
+</div> 
+<div id="table2" class="toggle-section w3-hide w3-animate-bottom">
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Mondays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn1" onclick="toggleSection2(&#39;btn1&#39;, &#39;sec-Monday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>Southampton</p>
+    </div>
+    <div id="btn4" onclick="toggleSection2(&#39;btn4&#39;, &#39;sec-Monday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">5:20 - 5:50pm<br>Southampton</p>
+    </div>
+  </div>
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Tuesdays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn6" onclick="toggleSection2(&#39;btn6&#39;, &#39;sec-Tuesday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>Southampton</p>
+    </div>
+    <div id="btn7" onclick="toggleSection2(&#39;btn7&#39;, &#39;sec-Tuesday&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>Southampton</p>
+    </div>
+  </div>
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn9" onclick="toggleSection2(&#39;btn9&#39;, &#39;sec-Wednesday&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>West End</p>
+    </div>
+  </div>
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Fridays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn12" onclick="toggleSection2(&#39;btn12&#39;, &#39;sec-Friday&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>West End</p>
+    </div>
+  </div>
+</div> 
+<div id="table3" class="toggle-section w3-hide w3-animate-bottom">
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Mondays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn2" onclick="toggleSection2(&#39;btn2&#39;, &#39;sec-Monday&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:20 - 4:50pm<br>Southampton</p>
+    </div>
+  </div>
+  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
+    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays</p>
+  </div>
+  <div class="w3-margin-left w3-margin-right w3-row">
+    <div id="btn8" onclick="toggleSection2(&#39;btn8&#39;, &#39;sec-Wednesday&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>West End</p>
+    </div>
+  </div>
+</div> 
+
+
+
+<a id="step3-anchor"></a>
+<p id="step3" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">3. Select your start date.</p>
+
+  <div id="sec-Sunday" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>ASAP! (Starting on Sun 16th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>In a Week (Starting on Sun 23rd Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>Next term (Starting on Sun 17th Sep)</p>       <p>15 lessons @6.5 + registration @15 = 112.5</p>      </div>
+    </a>
+  </div>
+  <div id="sec-Monday" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>ASAP! (Starting on Mon 10th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>In a Week (Starting on Mon 17th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>Next term (Starting on Mon 18th Sep)</p>       <p>15 lessons @6.5 + registration @15 = 112.5</p>      </div>
+    </a>
+  </div>
+  <div id="sec-Tuesday" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>ASAP! (Starting on Tue 11th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>In a Week (Starting on Tue 18th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>Next term (Starting on Tue 12th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>      </div>
+    </a>
+  </div>
+  <div id="sec-Wednesday" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>ASAP! (Starting on Wed 12th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>In a Week (Starting on Wed 19th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>Next term (Starting on Wed 13th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>      </div>
+    </a>
+  </div>
+  <div id="sec-Thursday" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>ASAP! (Starting on Thu 13th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>In a Week (Starting on Thu 20th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>Next term (Starting on Thu 14th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>      </div>
+    </a>
+  </div>
+  <div id="sec-Friday" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>ASAP! (Starting on Fri 14th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>In a Week (Starting on Fri 21st Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>Next term (Starting on Fri 15th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>      </div>
+    </a>
+  </div>
+  <div id="sec-Saturday" class="toggle-section-2 w3-hide w3-animate-bottom">
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>ASAP! (Starting on Sat 15th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>In a Week (Starting on Sat 22nd Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>      </div>
+    </a>
+    <a href="./register.html" style="text-decoration: none">
+      <div class="color-1 w3-margin w3-center w3-padding font-chunky w3-large">
+       <p>Next term (Starting on Sat 16th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>      </div>
+    </a>
+  </div>
+
+<script>
+function toggleSection(btn, sec) {
+    x = document.getElementById("step2");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    }
+    // Show next section
+    var all = document.getElementsByClassName("toggle-section");
+    for (i = 0; i < all.length; i++) {
+    	if (all[i].id != sec) {
+        	all[i].className = all[i].className.replace(" w3-show", "");
+        } else if (all[i].className.indexOf("w3-show") == -1) {
+        	all[i].className += " w3-show";
+        }
+    }
+    // Active button
+    var all = document.getElementsByClassName("toggle-button");
+    for (i = 0; i < all.length; i++) {
+    	if (all[i].id != btn && all[i].className.indexOf("w3-opacity") == -1) {
+        	all[i].className = all[i].className.replace("color-1", "w3-white");
+        	all[i].className += " w3-opacity";
+        } else if (all[i].id == btn && all[i].className.indexOf("w3-opacity") != -1) {
+        	all[i].className = all[i].className.replace("w3-white", "color-1");
+        	all[i].className = all[i].className.replace(" w3-opacity", "");
+        }
+    }
+    // scroll to ext step
+    $('html, body').animate({
+        scrollTop: $("#step2-anchor").offset().top
+    }, 1000);
+
+    // clear lower level buttons
+    var all = document.getElementsByClassName("toggle-button-2");
+    for (i = 0; i < all.length; i++) {
+       all[i].className = all[i].className.replace("color-2", "color-3");
+    }
+
+}
+
+function toggleSection2(btn, sec) {
+    x = document.getElementById("step3");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    }
+    // Show next section
+    var all = document.getElementsByClassName("toggle-section-2");
+    for (i = 0; i < all.length; i++) {
+    	if (all[i].id != sec) {
+        	all[i].className = all[i].className.replace(" w3-show", "");
+        } else if (all[i].className.indexOf("w3-show") == -1) {
+        	all[i].className += " w3-show";
+        }
+    }
+    // Active button
+    var all = document.getElementsByClassName("toggle-button-2");
+    for (i = 0; i < all.length; i++) {
+    	if (all[i].id != btn) {
+        	all[i].className = all[i].className.replace("color-2", "color-3");
+        } else {
+        	all[i].className = all[i].className.replace("color-3", "color-2");
+        }
+    }
+    // scroll to ext step
+    $('html, body').animate({
+        scrollTop: $("#step3-anchor").offset().top
+    }, 1000);
+}
+</script>
+
+
+
+</body></html>
