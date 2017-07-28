@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway|Dancing+Script" rel="stylesheet">
@@ -86,17 +87,50 @@ body, html {
 
 <body>
 
-PLACEHOLDER FOR REGISTRATION FORM:
-
-NAME, EMAIL, PHONE, CHILD, DOB, SHOE SIZE
-
 <div class="w3-container">
+  <h2>Input Details</h2>
+  <form>
+    <input class="color-1 w3-round w3-margin-bottom w3-input w3-border" type="test" placeholder="Parent/Guardian Name">
+    <input class="color-1 w3-round w3-margin-bottom w3-input w3-border" type="test" placeholder="Email">
+    <input class="color-1 w3-round w3-margin-bottom w3-input w3-border" type="test" placeholder="Phone">
+    <textarea class="color-1 w3-round w3-margin-bottom w3-input w3-border" type="test" placeholder="Addresss" rows="4"></textarea>
+    <input class="color-1 w3-round w3-margin-bottom w3-input w3-border" type="test" placeholder="Dancer's Name">
+    <input class="color-1 w3-round w3-margin-bottom w3-input w3-border" type="test" placeholder="Dancer's DOB">
+    <input class="color-1 w3-round w3-margin-bottom w3-input w3-border" type="test" placeholder="Dancer's Shoe Size">
+  </form>
+
 <?php
 	$class = $classes[$_GET['lesson']];
-	$option = getTermOptions($class[0])[$_GET['option']];
-	print "<p>$class[3] - $class[2] - $class[0] - " . timeRange($class[1]) . "</p>";
-	print "<p>$option[2] starting $option[0] with $option[1] lessons costing GBP$option[3]</p>";
 ?>
+
+ <h2>Terms and conditions</h2>
+<?php if ($_GET['type'] == 'trial') { ?>
+
+  <p>This is terms and conditions for trial</p>
+<?php } else { ?>
+  <p>This is terms and conditions for enrollment. They are longer</p>
+
+<?php } ?>
+
+
+
+ <h2>Booking Details</h2>
+
+<?php if ($_GET['type'] == 'trial') {
+	$option = getTrialOffers($class[0])[$_GET['option']];
+?>
+
+  <p>This is to confirm that you are booking in for <?php print $class[3];?> trial class at <?php print $class[2];?> on <?php print $option[0];?> for £<?php print $option[3];?>.</p>
+
+<?php } else { 
+	$option = getTermOptions($class[0])[$_GET['option']];
+?>
+
+  <p>This is to confirm that you are booking in for <?php print $class[3];?> classes at <?php print $class[2];?> on <?php print $class[0];?>s at <?php timeRange($class[1]);?>. Your first class will be on <?php print $option[0];?>, the total cost for <?php print $option[1];?> classes will be £<?php print $option[3];?>.</p>
+
+<?php } ?>
+  <p>You will now be directed to goCardless to setup a direct debit payment. Money will never be taken from your account without your permission. The initial amount will be taken today.</p>
+  <button class="w3-button w3-round color-1">Pay Now</button>
 </div>
 
 </body>

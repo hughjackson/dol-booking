@@ -1,8 +1,10 @@
 <?php
 
+$offer = array("Try a Class for £5", "5");
+
 $terms = array(
-	array("18 June 2017", "30 July 2017"),
-	array("11 Sept 2017", "30 Dec  2017"),
+	array("18 June 2017", "30 July 2017", "Summer Term"),
+	array("11 Sept 2017", "30 Dec  2017", "Autumn Term"),
 	);
 
 function isPast($time)
@@ -70,8 +72,10 @@ function nextTerm() {
 function getTermOptions($day) {
 	if (currentTerm()) {
 		$rem = classes_left(currentTerm(), $day);
-		$opts[] = array(date("D jS M", strtotime("next $day")),
-		                $rem, "ASAP!", 15+6.5*$rem);
+		if ($rem > 0) {
+			$opts[] = array(date("D jS M", strtotime("next $day")),
+					$rem, "ASAP!", 15+6.5*$rem);
+		}
 		if ($rem > 1) {
 			$opts[] = array(date("D jS M", strtotime("next $day + 1 weeks")),
 					$rem-1, "In a Week", 15+6.5*($rem-1));
@@ -79,7 +83,27 @@ function getTermOptions($day) {
 	}
 	if (nextTerm()) {
 		$rem = classes_left(nextTerm(), $day);
-		$opts[] = array(date("D jS M", strtotime("next $day", strtotime(nextTerm()[0]))), $rem, "Next term", 15+6.5*$rem);
+		$opts[] = array(date("D jS M", strtotime("next $day", strtotime(nextTerm()[0]))), $rem, nextTerm()[2], 15+6.5*$rem);
+	}
+	return $opts;
+}
+
+function getTrialOffers($day) {
+	global $offer;
+	if (currentTerm()) {
+		$rem = classes_left(currentTerm(), $day);
+		if ($rem > 0) {
+			$opts[] = array(date("D jS M", strtotime("next $day")),
+					$rem, "ASAP!", $offer[1]);
+		}
+		if ($rem > 1) {
+			$opts[] = array(date("D jS M", strtotime("next $day + 1 weeks")),
+					$rem-1, "In a Week", $offers[1]);
+		}
+	}
+	if (nextTerm()) {
+		$rem = classes_left(nextTerm(), $day);
+		$opts[] = array(date("D jS M", strtotime("next $day", strtotime(nextTerm()[0]))), $rem, "Start of Term", $offer[1]);
 	}
 	return $opts;
 }

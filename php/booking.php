@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway|Dancing+Script" rel="stylesheet">
@@ -113,21 +114,25 @@ body, html {
 <?php
 	foreach ($ages as $age) {
 ?>
+
+<!-- MOBILE Time List -->
+
 <div class="w3-hide-medium w3-hide-large">
 <div id="table<?php print $age[0]; ?>" class="toggle-section w3-hide w3-animate-bottom">
 <?php
 		foreach (daysForClass($age[1]) as $day) {
+			$loc = timesForClass($age[1], $day)[0][1];
 ?>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky"><?php print $day?>s</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky"><?php print $day . 's - ' . $loc?></p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
 <?php
 			foreach (timesForClass($age[1], $day) as $time) {
 ?>
     <div id="btn<?php print $time[2]; ?>" onclick="toggleSection2('btn<?php print $time[2]; ?>', 'sec-<?php print $time[2]; ?>')" 
-	class="toggle-button-2 w3-border w3-col <?php colSize($age[1], $day); ?> w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky"><?php print timeRange($time[0]) . "<br>" . $time[1]; ?></p>
+	class="toggle-button-2 w3-border w3-col <?php colSize($age[1], $day); ?> color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky"><?php print timeRange($time[0]); ?></p>
     </div>
 <?php
 			}
@@ -138,6 +143,8 @@ body, html {
 ?>
 </div> 
 </div> 
+
+<!-- DESKTOP Time List -->
 
 <div class="w3-hide-small">
 <div id="table<?php print $age[0]; ?>" class="toggle-section w3-hide w3-animate-bottom">
@@ -187,7 +194,7 @@ body, html {
 
 
 <a id="step3-anchor"></a>
-<p id="step3" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">3. Select your start date.</p>
+<p id="step3" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">3. Select your Package.</p>
 
 <?php
 	$num = 0;
@@ -195,16 +202,44 @@ body, html {
 		$day = $time[0];
 ?>
   <div id="sec-<?php print $num; ?>" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge"><?php print $offer[0]; ?></p>
+    <div class="w3-cell-row">
+<?php
+		$optnum = 0;
+		foreach (getTrialOffers($day) as $opt) {
+?>
+      <a href="register?lesson=<?php print $num;?>&type=trial&option=<?php print $optnum;?>" class = "w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+<?php
+			print "       <span>$opt[0] ($opt[2])</span><br>";
+			print "       <span>Special Price: £$opt[3]</span>";
+?>
+          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
+      </a>
+<?php
+			$optnum++;
+		}
+?>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
     <div class="w3-cell-row">
 <?php
 		$optnum = 0;
 		foreach (getTermOptions($day) as $opt) {
 ?>
-      <a href="register?lesson=<?php print $num;?>&option=<?php print $optnum;?>" class = "w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
+      <a href="register?lesson=<?php print $num;?>&type=enrol&option=<?php print $optnum;?>" class = "w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
 <?php
-			print "       <p>$opt[2] (Starting on $opt[0])</p>";
-			print "       <p>$opt[1] lessons @6.5 + registration @15 = $opt[3]</p>";
+			print "       <span>$opt[2] (Start $opt[0])</span><br>";
+			print "       <span>$opt[1] lessons @6.5 + registration @15 = £$opt[3]</span>";
 ?>
         </div>
       </a>
@@ -253,7 +288,7 @@ function toggleSection(btn, sec) {
     // clear lower level buttons
     var all = document.getElementsByClassName("toggle-button-2");
     for (i = 0; i < all.length; i++) {
-       all[i].className = all[i].className.replace("color-2", "color-3");
+       all[i].className = all[i].className.replace("color-3", "color-2");
     }
 
 }
@@ -276,9 +311,9 @@ function toggleSection2(btn, sec) {
     var all = document.getElementsByClassName("toggle-button-2");
     for (i = 0; i < all.length; i++) {
     	if (all[i].id != btn) {
-        	all[i].className = all[i].className.replace("color-2", "color-3");
-        } else {
         	all[i].className = all[i].className.replace("color-3", "color-2");
+        } else {
+        	all[i].className = all[i].className.replace("color-2", "color-3");
         }
     }
     // scroll to ext step

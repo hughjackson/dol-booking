@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<!-- saved from url=(0024)./ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Dance Out Loud</title>
-<link rel="icon" href="./favicon.ico" type="image/x-icon">
-
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Dance Out Loud</title>
+<link rel="icon" href="http://localhost:8000/favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./index_files/w3.css">
-<link rel="stylesheet" href="./index_files/font-awesome.min.css">
-<link href="./index_files/icon" rel="stylesheet">
-<link href="./index_files/css" rel="stylesheet">
-<script src="./index_files/jquery.min.js"></script>
+<link rel="stylesheet" href="index_files/w3.css">
+<link rel="stylesheet" href="index_files/w3_002.css">
+<link rel="stylesheet" href="index_files/font-awesome.css">
+<link href="index_files/icon.css" rel="stylesheet">
+<link href="index_files/css.css" rel="stylesheet">
+<script src="index_files/jquery.js"></script>
 <style>
 @font-face {
     font-family: playlist-caps;
@@ -87,19 +88,19 @@ body, html {
 <div class="w3-white">
   <div class="w3-cell-row">
     <div class="bgimg-class-1 w3-card-2 w3-cente w3-cell w3-mobile" style="height:100%; width:33%">
-      <div id="btn1" onclick="toggleSection(&#39;btn1&#39;, &#39;table1&#39;)" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
+      <div id="btn1" onclick="toggleSection('btn1', 'table1')" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
         <span class="w3-xlarge font-chunky">
           Dance With Me<br>1.5 - 3 yrs        </span>
       </div>
     </div>
     <div class="bgimg-class-2 w3-card-2 w3-cente w3-cell w3-mobile" style="height:100%; width:33%">
-      <div id="btn2" onclick="toggleSection(&#39;btn2&#39;, &#39;table2&#39;)" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
+      <div id="btn2" onclick="toggleSection('btn2', 'table2')" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
         <span class="w3-xlarge font-chunky">
           Fairy Ballet<br>3 - 5 yrs        </span>
       </div>
     </div>
     <div class="bgimg-class-3 w3-card-2 w3-cente w3-cell w3-mobile" style="height:100%; width:33%">
-      <div id="btn3" onclick="toggleSection(&#39;btn3&#39;, &#39;table3&#39;)" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
+      <div id="btn3" onclick="toggleSection('btn3', 'table3')" class="toggle-button color-hover-1 w3-hover-opacity-none w3-white w3-opacity w3-center w3-padding-jumbo" style="height:100%">
         <span class="w3-xlarge font-chunky">
           Tutu Ballet<br>5 -7 yrs        </span>
       </div>
@@ -110,48 +111,53 @@ body, html {
 <a id="step2-anchor"></a>
 <p id="step2" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">2. Select your day/time...</p>
 
+
+<!-- MOBILE Time List -->
+
 <div class="w3-hide-medium w3-hide-large">
 <div id="table1" class="toggle-section w3-hide w3-animate-bottom">
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Mondays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Mondays - Southampton - Lodge Rd</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn0" onclick="toggleSection2(&#39;btn0&#39;, &#39;sec-0&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>Southampton</p>
+    <div id="btn0" onclick="toggleSection2('btn0', 'sec-0')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm</p>
     </div>
-    <div id="btn3" onclick="toggleSection2(&#39;btn3&#39;, &#39;sec-3&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">4:55 - 5:25pm<br>Southampton</p>
+    <div id="btn3" onclick="toggleSection2('btn3', 'sec-3')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:55 - 5:25pm</p>
     </div>
   </div>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Tuesdays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Tuesdays - Southampton - Lodge Rd</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn5" onclick="toggleSection2(&#39;btn5&#39;, &#39;sec-5&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>Southampton</p>
+    <div id="btn5" onclick="toggleSection2('btn5', 'sec-5')" class="toggle-button-2 w3-border w3-col s12 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am</p>
     </div>
   </div>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays - West End - Hildene</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn10" onclick="toggleSection2(&#39;btn10&#39;, &#39;sec-10&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">4:30 - 5:00pm<br>West End</p>
+    <div id="btn10" onclick="toggleSection2('btn10', 'sec-10')" class="toggle-button-2 w3-border w3-col s12 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:30 - 5:00pm</p>
     </div>
   </div>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Fridays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Fridays - West End - Hildene</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn11" onclick="toggleSection2(&#39;btn11&#39;, &#39;sec-11&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>West End</p>
+    <div id="btn11" onclick="toggleSection2('btn11', 'sec-11')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am</p>
     </div>
-    <div id="btn13" onclick="toggleSection2(&#39;btn13&#39;, &#39;sec-13&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>West End</p>
+    <div id="btn13" onclick="toggleSection2('btn13', 'sec-13')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am</p>
     </div>
   </div>
 </div> 
 </div> 
+
+<!-- DESKTOP Time List -->
 
 <div class="w3-hide-small">
 <div id="table1" class="toggle-section w3-hide w3-animate-bottom">
@@ -173,25 +179,25 @@ body, html {
     </div>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn0" onclick="toggleSection2(&#39;btn0&#39;, &#39;sec-0&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>Southampton</p>
+    <div id="btn0" onclick="toggleSection2('btn0', 'sec-0')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>Southampton - Lodge Rd</p>
     </div>
-    <div id="btn5" onclick="toggleSection2(&#39;btn5&#39;, &#39;sec-5&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>Southampton</p>
+    <div id="btn5" onclick="toggleSection2('btn5', 'sec-5')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>Southampton - Lodge Rd</p>
     </div>
-    <div id="btn10" onclick="toggleSection2(&#39;btn10&#39;, &#39;sec-10&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">4:30 - 5:00pm<br>West End</p>
+    <div id="btn10" onclick="toggleSection2('btn10', 'sec-10')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:30 - 5:00pm<br>West End - Hildene</p>
     </div>
     <div class="w3-border w3-col w3-padding-small w3-grey" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky">-</p>
     </div>
-    <div id="btn11" onclick="toggleSection2(&#39;btn11&#39;, &#39;sec-11&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>West End</p>
+    <div id="btn11" onclick="toggleSection2('btn11', 'sec-11')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:00 - 9:30am<br>West End - Hildene</p>
     </div>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn3" onclick="toggleSection2(&#39;btn3&#39;, &#39;sec-3&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">4:55 - 5:25pm<br>Southampton</p>
+    <div id="btn3" onclick="toggleSection2('btn3', 'sec-3')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:55 - 5:25pm<br>Southampton - Lodge Rd</p>
     </div>
     <div class="w3-border w3-col w3-padding-small w3-grey" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky">-</p>
@@ -202,54 +208,59 @@ body, html {
     <div class="w3-border w3-col w3-padding-small w3-grey" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky">-</p>
     </div>
-    <div id="btn13" onclick="toggleSection2(&#39;btn13&#39;, &#39;sec-13&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>West End</p>
+    <div id="btn13" onclick="toggleSection2('btn13', 'sec-13')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>West End - Hildene</p>
     </div>
   </div>
 </div> 
 </div> 
+
+<!-- MOBILE Time List -->
+
 <div class="w3-hide-medium w3-hide-large">
 <div id="table2" class="toggle-section w3-hide w3-animate-bottom">
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Mondays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Mondays - Southampton - Lodge Rd</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn1" onclick="toggleSection2(&#39;btn1&#39;, &#39;sec-1&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>Southampton</p>
+    <div id="btn1" onclick="toggleSection2('btn1', 'sec-1')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm</p>
     </div>
-    <div id="btn4" onclick="toggleSection2(&#39;btn4&#39;, &#39;sec-4&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">5:20 - 5:50pm<br>Southampton</p>
+    <div id="btn4" onclick="toggleSection2('btn4', 'sec-4')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">5:20 - 5:50pm</p>
     </div>
   </div>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Tuesdays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Tuesdays - Southampton - Lodge Rd</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn6" onclick="toggleSection2(&#39;btn6&#39;, &#39;sec-6&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>Southampton</p>
+    <div id="btn6" onclick="toggleSection2('btn6', 'sec-6')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am</p>
     </div>
-    <div id="btn7" onclick="toggleSection2(&#39;btn7&#39;, &#39;sec-7&#39;)" class="toggle-button-2 w3-border w3-col s6 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>Southampton</p>
+    <div id="btn7" onclick="toggleSection2('btn7', 'sec-7')" class="toggle-button-2 w3-border w3-col s6 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am</p>
     </div>
   </div>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays - West End - Hildene</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn9" onclick="toggleSection2(&#39;btn9&#39;, &#39;sec-9&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>West End</p>
+    <div id="btn9" onclick="toggleSection2('btn9', 'sec-9')" class="toggle-button-2 w3-border w3-col s12 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm</p>
     </div>
   </div>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Fridays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Fridays - West End - Hildene</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn12" onclick="toggleSection2(&#39;btn12&#39;, &#39;sec-12&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>West End</p>
+    <div id="btn12" onclick="toggleSection2('btn12', 'sec-12')" class="toggle-button-2 w3-border w3-col s12 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am</p>
     </div>
   </div>
 </div> 
 </div> 
+
+<!-- DESKTOP Time List -->
 
 <div class="w3-hide-small">
 <div id="table2" class="toggle-section w3-hide w3-animate-bottom">
@@ -271,28 +282,28 @@ body, html {
     </div>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn1" onclick="toggleSection2(&#39;btn1&#39;, &#39;sec-1&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>Southampton</p>
+    <div id="btn1" onclick="toggleSection2('btn1', 'sec-1')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>Southampton - Lodge Rd</p>
     </div>
-    <div id="btn6" onclick="toggleSection2(&#39;btn6&#39;, &#39;sec-6&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>Southampton</p>
+    <div id="btn6" onclick="toggleSection2('btn6', 'sec-6')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>Southampton - Lodge Rd</p>
     </div>
-    <div id="btn9" onclick="toggleSection2(&#39;btn9&#39;, &#39;sec-9&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>West End</p>
+    <div id="btn9" onclick="toggleSection2('btn9', 'sec-9')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:40 - 4:10pm<br>West End - Hildene</p>
     </div>
     <div class="w3-border w3-col w3-padding-small w3-grey" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky">-</p>
     </div>
-    <div id="btn12" onclick="toggleSection2(&#39;btn12&#39;, &#39;sec-12&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>West End</p>
+    <div id="btn12" onclick="toggleSection2('btn12', 'sec-12')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">9:40 - 10:10am<br>West End - Hildene</p>
     </div>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn4" onclick="toggleSection2(&#39;btn4&#39;, &#39;sec-4&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">5:20 - 5:50pm<br>Southampton</p>
+    <div id="btn4" onclick="toggleSection2('btn4', 'sec-4')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">5:20 - 5:50pm<br>Southampton - Lodge Rd</p>
     </div>
-    <div id="btn7" onclick="toggleSection2(&#39;btn7&#39;, &#39;sec-7&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>Southampton</p>
+    <div id="btn7" onclick="toggleSection2('btn7', 'sec-7')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">10:20 - 10:50am<br>Southampton - Lodge Rd</p>
     </div>
     <div class="w3-border w3-col w3-padding-small w3-grey" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky">-</p>
@@ -306,26 +317,31 @@ body, html {
   </div>
 </div> 
 </div> 
+
+<!-- MOBILE Time List -->
+
 <div class="w3-hide-medium w3-hide-large">
 <div id="table3" class="toggle-section w3-hide w3-animate-bottom">
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Mondays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Mondays - Southampton - Lodge Rd</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn2" onclick="toggleSection2(&#39;btn2&#39;, &#39;sec-2&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">4:20 - 4:50pm<br>Southampton</p>
+    <div id="btn2" onclick="toggleSection2('btn2', 'sec-2')" class="toggle-button-2 w3-border w3-col s12 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:20 - 4:50pm</p>
     </div>
   </div>
-  <div class="w3-margin-top w3-margin-left w3-margin-right w3-padding-small color-2">
-    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays</p>
+  <div class="w3-margin-top w3-margin-left w3-margin-right">
+    <p class="w3-center w3-large text-color-3 font-chunky">Wednesdays - West End - Hildene</p>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn8" onclick="toggleSection2(&#39;btn8&#39;, &#39;sec-8&#39;)" class="toggle-button-2 w3-border w3-col s12 w3-padding-small color-3">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>West End</p>
+    <div id="btn8" onclick="toggleSection2('btn8', 'sec-8')" class="toggle-button-2 w3-border w3-col s12 color-2 w3-hover-opacity">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm</p>
     </div>
   </div>
 </div> 
 </div> 
+
+<!-- DESKTOP Time List -->
 
 <div class="w3-hide-small">
 <div id="table3" class="toggle-section w3-hide w3-animate-bottom">
@@ -347,14 +363,14 @@ body, html {
     </div>
   </div>
   <div class="w3-margin-left w3-margin-right w3-row">
-    <div id="btn2" onclick="toggleSection2(&#39;btn2&#39;, &#39;sec-2&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">4:20 - 4:50pm<br>Southampton</p>
+    <div id="btn2" onclick="toggleSection2('btn2', 'sec-2')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">4:20 - 4:50pm<br>Southampton - Lodge Rd</p>
     </div>
     <div class="w3-border w3-col w3-padding-small w3-grey" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky">-</p>
     </div>
-    <div id="btn8" onclick="toggleSection2(&#39;btn8&#39;, &#39;sec-8&#39;)" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
-      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>West End</p>
+    <div id="btn8" onclick="toggleSection2('btn8', 'sec-8')" class="toggle-button-2 w3-button w3-border w3-col w3-padding-small color-3" style="width:20%; height:80px">
+      <p class="w3-center w3-medium text-color-2 font-chunky">3:00 - 3:30pm<br>West End - Hildene</p>
     </div>
     <div class="w3-border w3-col w3-padding-small w3-grey" style="width:20%; height:80px">
       <p class="w3-center w3-medium text-color-2 font-chunky">-</p>
@@ -369,229 +385,341 @@ body, html {
 
 
 <a id="step3-anchor"></a>
-<p id="step3" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">3. Select your start date.</p>
+<p id="step3" class="w3-hide w3-animate-bottom w3-margin-left color-text-1 font-cursive w3-xxlarge">3. Select your Package.</p>
 
   <div id="sec-0" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=0&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Mon 10th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=0&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Mon 18th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=0&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Mon 17th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=0&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Mon 18th Sep)</p>       <p>15 lessons @6.5 + registration @15 = 112.5</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=0&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Mon 18th Sep)</span><br>       <span>15 lessons @6.5 + registration @15 = £112.5</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-1" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=1&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Mon 10th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=1&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Mon 18th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=1&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Mon 17th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=1&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Mon 18th Sep)</p>       <p>15 lessons @6.5 + registration @15 = 112.5</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=1&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Mon 18th Sep)</span><br>       <span>15 lessons @6.5 + registration @15 = £112.5</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-2" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=2&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Mon 10th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=2&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Mon 18th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=2&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Mon 17th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=2&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Mon 18th Sep)</p>       <p>15 lessons @6.5 + registration @15 = 112.5</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=2&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Mon 18th Sep)</span><br>       <span>15 lessons @6.5 + registration @15 = £112.5</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-3" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=3&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Mon 10th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=3&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Mon 18th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=3&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Mon 17th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=3&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Mon 18th Sep)</p>       <p>15 lessons @6.5 + registration @15 = 112.5</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=3&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Mon 18th Sep)</span><br>       <span>15 lessons @6.5 + registration @15 = £112.5</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-4" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=4&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Mon 10th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=4&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Mon 18th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=4&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Mon 17th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=4&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Mon 18th Sep)</p>       <p>15 lessons @6.5 + registration @15 = 112.5</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=4&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Mon 18th Sep)</span><br>       <span>15 lessons @6.5 + registration @15 = £112.5</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-5" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=5&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Tue 11th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=5&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Tue 12th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=5&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Tue 18th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=5&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Tue 12th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=5&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Tue 12th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-6" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=6&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Tue 11th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=6&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Tue 12th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=6&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Tue 18th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=6&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Tue 12th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=6&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Tue 12th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-7" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=7&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Tue 11th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=7&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Tue 12th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=7&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Tue 18th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=7&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Tue 12th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=7&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Tue 12th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-8" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=8&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Wed 12th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=8&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Wed 13th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=8&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Wed 19th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=8&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Wed 13th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=8&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Wed 13th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-9" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=9&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Wed 12th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=9&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Wed 13th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=9&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Wed 19th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=9&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Wed 13th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=9&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Wed 13th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-10" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=10&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Wed 12th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=10&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Wed 13th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=10&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Wed 19th Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=10&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Wed 13th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=10&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Wed 13th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-11" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=11&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Fri 14th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=11&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Fri 15th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=11&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Fri 21st Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=11&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Fri 15th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=11&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Fri 15th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-12" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=12&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Fri 14th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=12&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Fri 15th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=12&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Fri 21st Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=12&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Fri 15th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=12&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Fri 15th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
   <div id="sec-13" class="toggle-section-2 w3-hide w3-animate-bottom">
+
+<!-- TRIAL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Try a Class for £5</p>
     <div class="w3-cell-row">
-      <a href="./register.html?lesson=13&amp;option=0" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>ASAP! (Starting on Fri 14th Jul)</p>       <p>3 lessons @6.5 + registration @15 = 34.5</p>        </div>
+      <a href="http://localhost:8000/register?lesson=13&amp;type=trial&amp;option=0" class="w3-cell" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small w3-display-container" style="height:100%">
+       <span>Fri 15th Sep (Start of Term)</span><br>       <span>Special Price: £5</span>          <!-- 
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-display-right w3-btn color-3 w3-round-xlarge w3-margin-right">i</button>
+          -->
+        </div>
       </a>
-      <a href="./register.html?lesson=13&amp;option=1" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>In a Week (Starting on Fri 21st Jul)</p>       <p>2 lessons @6.5 + registration @15 = 28</p>        </div>
-      </a>
-      <a href="./register.html?lesson=13&amp;option=2" class="w3-cell w3-mobile" style="height:100%;width:33%;text-decoration:none">
-        <div class="color-1 w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large" style="height:100%">
-       <p>Next term (Starting on Fri 15th Sep)</p>       <p>16 lessons @6.5 + registration @15 = 119</p>        </div>
+    </div>
+
+
+<!-- ENROL packages -->
+    <p class="w3-margin-left color-text-1 font-chunky w3-xlarge">Term Enrolment</p>
+    <div class="w3-cell-row">
+      <a href="http://localhost:8000/register?lesson=13&amp;type=enrol&amp;option=0" class="w3-cell w3-mobile" style="height:100%;text-decoration:none">
+        <div class="color-1 w3-hover-opacity w3-leftbar w3-topbar w3-rightbar w3-bottombar w3-border-white w3-center w3-container font-chunky w3-large w3-padding-small" style="height:100%">
+       <span>Autumn Term (Start Fri 15th Sep)</span><br>       <span>16 lessons @6.5 + registration @15 = £119</span>        </div>
       </a>
     </div>
   </div>
@@ -630,7 +758,7 @@ function toggleSection(btn, sec) {
     // clear lower level buttons
     var all = document.getElementsByClassName("toggle-button-2");
     for (i = 0; i < all.length; i++) {
-       all[i].className = all[i].className.replace("color-2", "color-3");
+       all[i].className = all[i].className.replace("color-3", "color-2");
     }
 
 }
@@ -653,9 +781,9 @@ function toggleSection2(btn, sec) {
     var all = document.getElementsByClassName("toggle-button-2");
     for (i = 0; i < all.length; i++) {
     	if (all[i].id != btn) {
-        	all[i].className = all[i].className.replace("color-2", "color-3");
-        } else {
         	all[i].className = all[i].className.replace("color-3", "color-2");
+        } else {
+        	all[i].className = all[i].className.replace("color-2", "color-3");
         }
     }
     // scroll to ext step
